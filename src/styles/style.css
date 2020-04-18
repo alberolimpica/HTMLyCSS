@@ -1,14 +1,75 @@
 body {
+    margin: 0;
     height: 100vh;
     color: #1f1f1f;
     background: linear-gradient(to bottom, #c0ffee, #bada55);
-  }
+}
 
 
-h1.header{
-    font-family: 'Pacifico', cursive;
+.header{
     padding:60px;
     text-align: center;
     font-size: 30px;
     color: white;
  }
+
+.header h1{
+    font-family: 'Pacifico', cursive;
+}
+.nav {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(0, 177, 184);
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav a:hover {
+    background-color: #c0ffee;
+    color: black;
+    border-radius: 15px;
+}
+
+.nav a.active {
+    border-radius: 15px;
+    background-color: #bada55;
+    color: white;
+}
+
+.nav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.icon {
+        float: right;
+        display: block;
+    }
+    .header{
+        padding:0px;
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
