@@ -82,6 +82,11 @@ ul.breadcrumb {
     text-align: center;
     font-size: 12px;
   }
+
+  iframe{
+      width: 90%;
+      height: auto;
+  }
 @media screen and (max-width: 600px) {
     nav a:not(:first-child) {display: none;}
     ul.breadcrumb {display: none;}
