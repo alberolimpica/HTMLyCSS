@@ -6,68 +6,107 @@ body {
 }
 
 
-.header{
-    padding:60px;
+header{
+    padding-left:60px;
+    padding-right:60px;
     text-align: center;
     font-size: 30px;
     color: white;
  }
 
-.header h1{
+header h1{
     font-family: 'Pacifico', cursive;
 }
-.nav {
+
+main{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+nav{
     border-radius: 15px;
     overflow: hidden;
     background-color: rgb(0, 177, 184);
 }
 
-.nav a {
+nav a {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
 }
 
-.nav a:hover {
+nav a:hover {
     background-color: #c0ffee;
     color: black;
     border-radius: 15px;
 }
 
-.nav a.active {
+nav a.active {
     border-radius: 15px;
     background-color: #bada55;
     color: white;
 }
 
-.nav .icon {
+nav .icon {
     display: none;
 }
 
+ul.breadcrumb {
+    list-style: none;
+    text-align: center;
+    color: #01447e
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: none;
+  }
+
+  figcaption{
+    text-align: center;
+    font-size: 12px;
+  }
 @media screen and (max-width: 600px) {
-    .nav a:not(:first-child) {display: none;}
-    .nav a.icon {
+    nav a:not(:first-child) {display: none;}
+    ul.breadcrumb {display: none;}
+    nav a.icon {
         float: right;
         display: block;
     }
-    .header{
+    header{
         padding:0px;
         font-size: 5vw;
+    }
+    main{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .nav.responsive {position: relative;}
-    .nav.responsive .icon {
+    nav.responsive {position: relative;}
+    nav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-    .nav.responsive a {
+    nav.responsive a {
         float: none;
         display: block;
         text-align: left;

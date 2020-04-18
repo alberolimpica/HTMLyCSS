@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href ="styles/style.css">
+    <script src="https://kit.fontawesome.com/de5d5f0731.js" crossorigin="anonymous"></script>
+  </head> 
+<body>
+  <header>
+    <h1>S.Alberola</h1>
+    <nav id="menuNav">
+      <a href="../index.html">Home</a>
+      <a href="lenguajesFront.html">Lenguajes FrontEnd</a>
+      <a href="lenguajesBack.html" class="active">Lenguajes BacklEnd</a>
+      <a href="javascript:void(0);" class="icon" onclick="menuResponsive()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Lenguajes BackEnd</h2>
+    <p>Cuando abrimos el navegador y entramos en una pagina web, hay una serie de ejecuciones y operaciones que se producen del lado del servidor para que la interactuacion con el usuario sea mas agradable, amena y completa</p>
+    <p>El desarrollo BackEnd se ocupa de diseñar la parte del lado del servidor, las conexiones con bases de datos, las conexiones con distintas APIs, etc.</p>
+    <p>Los lenguajes mas comunes de BackEnd son los siguientes:</p>
+    <ul>
+      <li><a href="backend/javaBE.html">Java</a></li>
+      <li>Python</li>
+      <li>PHP</li>
+    </ul>
+  </main>
+
+
+  <footer></footer>
+
+  <script>
+    function menuResponsive() {
+      var x = document.getElementById("menuNav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
+</body>
+</html>

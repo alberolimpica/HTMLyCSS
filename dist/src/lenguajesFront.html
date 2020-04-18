@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.0a8160bb.css">
+    <script src="https://kit.fontawesome.com/de5d5f0731.js" crossorigin="anonymous"></script>
+  <script src="/htmlFE.js"></script></head> 
+<body>
+  <header>
+    <h1>S.Alberola</h1>
+    <nav id="menuNav">
+      <a href="/index.html">Home</a>
+      <a href="/src/lenguajesFront.html" class="active">Lenguajes FrontEnd</a>
+      <a href="/src/lenguajesBack.html">Lenguajes BackEnd</a>
+      <a href="javascript:void(0);" class="icon" onclick="menuResponsive()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Lenguajes FrontEnd</h2>
+    <p>Cuando abrimos una página web en un navegador, cuando está carga lo primero que vemos es la parte FrontEnd del sitio.</p>
+    <p>El desarrollo FrontEnd se ocupa de diseñar la parte del lado del cliente, la que se verá desde el navegador.</p>
+    <p>Los lenguajes mas importantes FrontEnd son los siguientes:</p>
+    <ul>
+      <li><a href="/src/frontend/htmlFE.html">HTML</a></li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </main>
+
+
+  <footer></footer>
+
+  <script>function menuResponsive() {
+  var x = document.getElementById("menuNav");
+
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+}</script>
+</body>
+</html>

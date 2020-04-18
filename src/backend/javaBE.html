@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href ="../styles/style.css">
+    <script src="https://kit.fontawesome.com/de5d5f0731.js" crossorigin="anonymous"></script>
+  </head> 
+<body>
+  <header>
+    <h1>S.Alberola</h1>
+    <nav id="menuNav">
+      <a href="../../index.html">Home</a>
+      <a href="../lenguajesFront.html">Lenguajes FrontEnd</a>
+      <a href="../lenguajesBack.html">Lenguajes BacklEnd</a>
+      <a href="javascript:void(0);" class="icon" onclick="menuResponsive()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+
+  <ul class="breadcrumb">
+    <li><a href="../lenguajesBack.html">Lenguajes BackEnd</a></li>
+    <li>Java</li>
+  </ul>
+
+  <main>
+    <h2>Java</h2>
+    <p>Java es un lenguaje de programación de proposito general, orientado a objetos y basado en clases </p> 
+    <p>Este lenguaje puede ser utilizado para programar una gran variedad de desarrollos: aplicaciones mobiles, aplicaciones web, aplicaciones de escritorio, juegos...</p>
+    <p>Java está presente en muchas de las aplicaciones que suamos, tanto es así que si algun día se decidiese acabar con Java y pulsar el botón rojo sería una catastrofe:</p>
+    <figure>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/E3418SeWZfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <figcaption>Fatales consecuencias del Javapocalipsis</figcaption>
+    </figure>
+</main>
+
+  <footer></footer>
+
+  <script>
+    function menuResponsive() {
+      var x = document.getElementById("menuNav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
+</body>
+</html>
