@@ -1,6 +1,4 @@
 body {
-    margin: 0;
-    height: 100vh;
     color: #1f1f1f;
     background: linear-gradient(to bottom, #c0ffee, #bada55);
 }
@@ -87,6 +85,12 @@ ul.breadcrumb {
       width: 90%;
       height: auto;
   }
+  .element{
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      display:block;
+  }
 @media screen and (max-width: 600px) {
     nav a:not(:first-child) {display: none;}
     ul.breadcrumb {display: none;}
@@ -101,6 +105,9 @@ ul.breadcrumb {
     main{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .element{
+        width: 90%;
     }
 }
 
