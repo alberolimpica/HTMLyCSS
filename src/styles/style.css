@@ -3,22 +3,33 @@ body {
     height: 100vh;
     color: #1f1f1f;
     background-image: radial-gradient(circle,  #c0ffee 0%, #bada55 100%) ;
+    overflow-x: hidden;
 }
 
+.saraClip{
+    float: left;
+    clip-path: circle(50%);
+    width: 50px;
+    margin: 10px;
+}
 
 header{
     padding-left:60px;
     padding-right:60px;
     text-align: center;
     font-size: 30px;
-    color: white;
  }
 
-header h1{
+header h1, .saraFooter{
     font-family: 'Pacifico', cursive;
+    color: white;
 }
 
-main{
+header img{
+    height: 30px;
+}
+
+main, footer{
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -95,7 +106,41 @@ ul.breadcrumb {
       margin-left: auto;
       margin-right: auto;
       display:block;
+    }
+
+    #logoIndex{
+        animation-duration: 4s;
+        animation-name: logoSlideIn;
+    }
+
+    @keyframes logoSlideIn {
+        from {
+            margin-left: 100%;
+            width: 300%; 
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+  ul.no_bullet{
+      list-style-type: none;
   }
+
+  .listLogos{
+      vertical-align: middle;
+      width: 50px;
+  }
+
+  .detailTitle{
+      text-align: center;
+  }
+  .frontAndBackImage{
+      width:350px;
+  }
+
 @media screen and (max-width: 600px) {
     nav a:not(:first-child) {display: none;}
     ul.breadcrumb {display: none;}
@@ -107,20 +152,18 @@ ul.breadcrumb {
         padding:0px;
         font-size: 5vw;
     }
-    main{
+    main, footer{
         padding-left: 15px;
         padding-right: 15px;
     }
     .element{
         width: 90%;
     }
-    iframe{
+    .frontAndBackImage, iframe{
         width:90%;
         height:auto;
     }
-}
 
-@media screen and (max-width: 600px) {
     nav.responsive {position: relative;}
     nav.responsive .icon {
         position: absolute;

@@ -1,37 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href ="styles/style.css">
-    <script src="https://kit.fontawesome.com/de5d5f0731.js" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href ="fontawesome-free-5.13.0-web/css/all.css">
+    <title>Seccion lenguajes front end</title>
   </head> 
 <body>
   <header>
-    <h1>S.Alberola</h1>
+    <h1>S<img src = "img/hibiscus-311443_1280.png" alt = "Hibisco">Alberola</h1>
     <nav id="menuNav">
       <a href="../index.html">Home</a>
       <a href="lenguajesFront.html" class="active">Lenguajes FrontEnd</a>
       <a href="lenguajesBack.html">Lenguajes BackEnd</a>
       <a href="javascript:void(0);" class="icon" onclick="menuResponsive()">
-      <i class="fa fa-bars"></i>
+      <i class="fas fa-bars"></i>
       </a>
     </nav>
   </header>
 
   <main>
-    <h2>Lenguajes FrontEnd</h2>
+    <div class ="detailTitle">
+      <h2>Lenguajes FrontEnd</h2>
+      <img src = "img/Frontend.png" alt = "CSS" class = "frontAndBackImage">
+    </div>
     <p>Cuando abrimos una página web en un navegador, cuando está carga lo primero que vemos es la parte FrontEnd del sitio.</p>
     <p>El desarrollo FrontEnd se ocupa de diseñar la parte del lado del cliente, la que se verá desde el navegador.</p>
     <p>Los lenguajes mas importantes FrontEnd son los siguientes:</p>
-    <ul>
-      <li><a href="frontend/htmlFE.html">HTML</a></li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+    <ul class="no_bullet">
+      <li><img src = "img/html.png" alt = "HTML" class = "listLogos"><a href="frontend/htmlFE.html">HTML</a></li>
+      <li><img src = "img/css.png" alt = "CSS" class = "listLogos">CSS</li>
+      <li><img src = "img/js.png" alt = "JS" class = "listLogos">JavaScript</li>
     </ul>
   </main>
 
 
-  <footer></footer>
+  <hr>
+
+  <footer>
+    <img src = "img/SaraAlberolaMahiques.jpg" alt = "Sara Alberola" class = "saraClip">
+    <p class = "saraFooter">S.Alberola</p>
+    <p>Página web creada para la asignatura herramientas HTML y CSS I del Máster de desarrollo de sitios y aplicaciones web de la Universitat Oberta de Cataluña</p>
+    <p>Desarrollado por: Sara Alberola Mahiques</p>
+  </footer>
 
   <script>
     function menuResponsive() {
