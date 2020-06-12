@@ -6,6 +6,7 @@
     <link  rel="preload" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" async>
     <link rel = "stylesheet" href ="../styles/style.css">
     <link rel = "stylesheet" href ="../fontawesome-free-5.13.0-web/css/all.css" async>
+
     <title>Seccion Java back end</title>
     <meta name="description" content="Pagina web de ejemplo para la asignatura de HTML y CSS I">
   </head> 
@@ -33,10 +34,9 @@
     <p><b>Java</b> es un lenguaje de programación de proposito general, orientado a objetos y basado en clases </p> 
     <p>Este lenguaje puede ser utilizado para programar una gran variedad de desarrollos: aplicaciones mobiles, aplicaciones web, aplicaciones de escritorio, juegos...</p>
     <p>Java está presente en muchas de las aplicaciones que suamos, tanto es así que si algun día se decidiese acabar con Java y pulsar el botón rojo sería una catastrofe:</p>
-    <figure>
-      <iframe title ="Fatales consecuencias del Javapocalipsis" rel = "preconnect" src="https://www.youtube.com/embed/E3418SeWZfQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-        <figcaption>Fatales consecuencias del Javapocalipsis</figcaption>
-    </figure>
+  
+  <div  class="youtube-player" data-id="E3418SeWZfQ"></div>
+
 </main>
 
 <hr>
@@ -57,6 +57,33 @@
         x.className = "nav";
       }
     }
+
+    document.addEventListener("DOMContentLoaded",
+          function() {
+              var div, n,
+                  v = document.getElementsByClassName("youtube-player");
+              for (n = 0; n < v.length; n++) {
+                  div = document.createElement("div");
+                  div.setAttribute("data-id", v[n].dataset.id);
+                  div.innerHTML = labnolThumb(v[n].dataset.id);
+                  div.onclick = labnolIframe;
+                  v[n].appendChild(div);
+              }
+          });
+  
+      function labnolThumb(id) {
+          var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+              play = '<div class="play"></div>';
+          return thumb.replace("ID", id) + play;
+      }
+  
+      function labnolIframe() {
+          var iframe = document.createElement("iframe");
+          iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.id + "?autoplay=1");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute("allowfullscreen", "1");
+          this.parentNode.replaceChild(iframe, this);
+      }
   </script>
 </body>
 </html>
